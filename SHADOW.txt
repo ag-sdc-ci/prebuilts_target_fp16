@@ -1,0 +1,5 @@
+shadow prebuilt repo: fp16 (target)
+  upstream package: platform/external/FP16 (fp16_headers)
+  api-level: universal (C/C++ headers)
+  layout: extracted include/ headers; Android.bp providing fp16_headers
+  date: 2026-10-17

@@ -1,0 +1,30 @@
+package {
+    default_applicable_licenses: ["external_FP16_license"],
+}
+
+license {
+    name: "external_FP16_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-MIT",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+cc_library_headers {
+    name: "fp16_headers",
+    export_include_dirs: ["include"],
+    host_supported: true,
+    vendor_available: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.neuralnetworks",
+        "com.android.extservices",
+        "com.android.adservices",
+        "com.android.ondevicepersonalization",
+    ],
+}
